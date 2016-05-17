@@ -26,7 +26,7 @@ values."
      auto-completion
      better-defaults
      emacs-lisp
-     g;it
+     git
      ;;markdown
      c-c++
      semantic
@@ -247,7 +247,10 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (global-set-key (kbd "C-+") 'spacemacs/scale-up-font)
+  (global-set-key (kbd "C--") 'spacemacs/scale-down-font)
   )
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
