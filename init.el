@@ -38,6 +38,7 @@ values."
      ;spell-checking
      syntax-checking
      version-control
+     (chinese :variables chinese-enable-youdao-dict t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -249,6 +250,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-set-key (kbd "C-+") 'spacemacs/scale-up-font)
   (global-set-key (kbd "C--") 'spacemacs/scale-down-font)
+  (global-set-key (kbd "<f5>") 'youdao-dictionary-search-at-point+)
+  
   )
 
 
