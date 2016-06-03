@@ -239,6 +239,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq org-agenda-files (list "~/git/my-gtd/todo.org"))
   )
 
 (defun dotspacemacs/user-config ()
@@ -251,7 +252,7 @@ you should place your code here."
   (global-set-key (kbd "C-+") 'spacemacs/scale-up-font)
   (global-set-key (kbd "C--") 'spacemacs/scale-down-font)
   (global-set-key (kbd "<f5>") 'youdao-dictionary-search-at-point+)
-  
+  (setq x-select-enable-clipboard t)
   )
 
 
