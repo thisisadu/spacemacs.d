@@ -26,7 +26,7 @@ values."
      auto-completion
      better-defaults
      emacs-lisp
-     git
+     ;;git
      ;;markdown
      c-c++
      semantic
