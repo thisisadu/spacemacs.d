@@ -254,9 +254,9 @@ you should place your code here."
   (global-set-key (kbd "C-+") 'spacemacs/scale-up-font)
   (global-set-key (kbd "C--") 'spacemacs/scale-down-font)
   (global-set-key (kbd "<f5>") 'youdao-dictionary-search-at-point+)
+  (global-set-key (kbd "<f6>") 'spacemacs/enlarge-window-horizontally)
+  (global-set-key (kbd "<f7>") 'spacemacs/shrink-window-horizontally)
   (setq x-select-enable-clipboard t)
   )
-
-
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
