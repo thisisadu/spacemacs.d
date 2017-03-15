@@ -103,6 +103,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         tango-dark
                          spacemacs-dark
                          spacemacs-light
                          leuven
@@ -186,7 +187,7 @@ values."
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
    dotspacemacs-fullscreen-use-non-native nil
@@ -265,6 +266,7 @@ you should place your code here."
   (global-set-key (kbd "<f6>") 'spacemacs/enlarge-window-horizontally)
   (global-set-key (kbd "<f7>") 'spacemacs/shrink-window-horizontally)
   (setq x-select-enable-clipboard t)
+  (spacemacs/toggle-highlight-current-line-globally-off)
   )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
