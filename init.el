@@ -28,7 +28,7 @@ values."
      better-defaults
      emacs-lisp
      ;;git
-     ;;markdown
+     markdown
      theming
      themes-megapack
      c-c++
@@ -246,6 +246,10 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq org-agenda-files (list "~/git/my-gtd/todo.org"))
+  (setq configuration-layer--elpa-archives
+      '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
+	("org-cn"   . "http://elpa.zilongshanren.com/org/")
+	("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
   )
 
 (defun dotspacemacs/user-config ()
