@@ -236,7 +236,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup "trailing"
    ))
 
 (defun dotspacemacs/user-init ()
@@ -253,6 +253,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
 	("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
   )
 
+(defun insert-4-spaces ()
+  (interactive)
+  (insert "    "))
+
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
@@ -265,8 +269,11 @@ you should place your code here."
   (global-set-key (kbd "<f5>") 'youdao-dictionary-search-at-point+)
   (global-set-key (kbd "<f6>") 'spacemacs/enlarge-window-horizontally)
   (global-set-key (kbd "<f7>") 'spacemacs/shrink-window-horizontally)
+  (global-set-key (kbd "TAB") 'insert-4-spaces)
   (setq x-select-enable-clipboard t)
+  (setq tab-width 4)
   (spacemacs/toggle-highlight-current-line-globally-off)
+  (spacemacs/toggle-whitespace-cleanup-on)
   )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
