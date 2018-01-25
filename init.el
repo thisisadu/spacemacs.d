@@ -236,7 +236,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup "trailing"
+   dotspacemacs-whitespace-cleanup "all"
    ))
 
 (defun dotspacemacs/user-init ()
@@ -251,6 +251,14 @@ before packages are loaded. If you are unsure, you should try in setting them in
       '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
 	("org-cn"   . "http://elpa.zilongshanren.com/org/")
 	("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
+  (add-hook 'prog-mode-hook
+            (lambda ()
+              (setq-default indent-tabs-mode nil
+                            tab-width 4
+                            c-basic-offset 4)
+              (setq indent-tabs-mode nil
+                    tab-width 4
+                    c-basic-offset 4)))
   )
 
 (defun insert-4-spaces ()
@@ -269,7 +277,7 @@ you should place your code here."
   (global-set-key (kbd "<f5>") 'youdao-dictionary-search-at-point+)
   (global-set-key (kbd "<f6>") 'spacemacs/enlarge-window-horizontally)
   (global-set-key (kbd "<f7>") 'spacemacs/shrink-window-horizontally)
-  (global-set-key (kbd "TAB") 'insert-4-spaces)
+  ;(global-set-key (kbd "TAB") 'insert-4-spaces)
   (setq x-select-enable-clipboard t)
   (setq tab-width 4)
   (spacemacs/toggle-highlight-current-line-globally-off)
@@ -277,3 +285,15 @@ you should place your code here."
   )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(tab-width 4))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
